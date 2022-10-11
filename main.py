@@ -37,4 +37,4 @@ def rce():
     return render_template('rce.html', output=output)
 
 
-app.run()
+# app.run()
