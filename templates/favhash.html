@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Favhash{% endblock %}
+{% block content %}
+<h1>Favhash</h1>
+<form action="" method="post">
+    <label for="url">Favicon URL:</label>
+    <input name="url" type="text">
+    <input type="submit" value="Submit">
+</form>
+<pre>{{ output }}</pre>
+{% endblock %}
