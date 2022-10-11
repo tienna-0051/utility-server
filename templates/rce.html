@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}RCE{% endblock %}
+{% block content %}
+<h1>RCE</h1>
+<form action="" method="post">
+    <input name="cmd" type="text">
+    <input type="submit" value="Submit">
+</form>
+<pre style="overflow: scroll;">{{ output }}</pre>
+{% endblock %}
