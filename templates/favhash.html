@@ -7,5 +7,8 @@
     <input name="url" type="text">
     <input type="submit" value="Submit">
 </form>
+{% if output %}
 <pre>{{ output }}</pre>
+<a target="_blank" href="https://www.shodan.io/search?query={{ output}}">https://www.shodan.io/search?query={{ output}}</pre>
+{% endif %}
 {% endblock %}
